@@ -21,9 +21,9 @@ export const createThumbnail = mutation({
 })
 
 export const getThumbnailsForUser = query({
-    args: {},
+    // args: {},
 
-    handler: async (ctx, args) => {
+    handler: async (ctx) => {
         const user = await ctx.auth.getUserIdentity();
         if(!user) {
             return []
